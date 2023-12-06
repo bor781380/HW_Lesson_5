@@ -69,7 +69,6 @@ void ReducedArray(int[,] arr)
     }
     Console.WriteLine($"Из массива удалена строка с индексом {linemin} и столбец с индексом {columnmin} содержащие минимальное значение {min}", linemin, columnmin, min);
     Console.WriteLine("Итоговый массив:");
-    //PrintArray($"Из массива удалена строка {linemin} и столбец {columnmin} содержащие минимальное значение {min}, итоговый массив: {rarray}", linemin, columnmin, min, rarray);
     PrintArray(rarray);
 }
 
