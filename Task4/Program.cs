@@ -53,9 +53,7 @@ void ReducedArray(int[,] arr)
             }
         }
     }
-    Console.WriteLine((min, linemin, columnmin)); 
     int s=0;
-   
     for(int i = 0; i < arr.GetLength(0); i++)
     {
         if (i!=linemin)
@@ -69,9 +67,12 @@ void ReducedArray(int[,] arr)
         }
         else s=s+1;
     }
+    Console.WriteLine($"Из массива удалена строка с индексом {linemin} и столбец с индексом {columnmin} содержащие минимальное значение {min}", linemin, columnmin, min);
+    Console.WriteLine("Итоговый массив:");
+    //PrintArray($"Из массива удалена строка {linemin} и столбец {columnmin} содержащие минимальное значение {min}, итоговый массив: {rarray}", linemin, columnmin, min, rarray);
     PrintArray(rarray);
 }
 
-int[,] newArray = GetArray(4, 4, 0, 10);
+int[,] newArray = GetArray(5, 4, 0, 10);
 PrintArray(newArray);
 ReducedArray(newArray);
